@@ -18,5 +18,4 @@ $animals = [
 
 
 
-
 require 'index.view.php';
