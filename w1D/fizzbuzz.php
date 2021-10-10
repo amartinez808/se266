@@ -1,6 +1,7 @@
 <?php
 require 'functions.php';
+require 'fizzbuzz.view.php';
 
-fizzbuzz($num);
+fizzbuzz($i);
 
 ?>

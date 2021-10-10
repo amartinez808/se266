@@ -1,30 +1,27 @@
 <?php
 
 function fizzbuzz($num){
-    for ($i = 1; $i <= 100; $i++)
+    for ($num = 1; $num <= 100; $num++)
     {
-      if ( $i%2 == 0 && $i%3 == 0 )
+      if ( $num%2 == 0 && $num%3 == 0 )
        {
-         echo $i . " FizzBuzz"."\n" ;
+         echo $num . " FizzBuzz"."\n" ;
        }
-      else if ( $i%2 == 0 ) 
+      else if ( $num%2 == 0 ) 
        {
-         echo $i. " Fizz"."\n";
+         echo $num. " Fizz"."\n";
        }
-         else if ( $i%3 == 0 ) 
+         else if ( $num%3 == 0 ) 
        {
-         echo $i. " Buzz"."\n";
+         echo $num. " Buzz"."\n";
        }
          else
        {
-         echo $i."\n";
+         echo $num."\n";
        }
      }
 }
+?>
 
 
-function dd($data){
-    echo '<pre>';
-    die(var_dump($data));
-    echo '</pre>';
 }
