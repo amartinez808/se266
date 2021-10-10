@@ -6,7 +6,7 @@ $task = [
     'due' => 'today',
     'assigned_to' => 'Antonio',
     'completed' => false 
-    
 ];
 
 require 'index.view.php';
+?>
