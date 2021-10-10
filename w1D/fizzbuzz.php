@@ -1,7 +1,11 @@
 <?php
 require 'functions.php';
-require 'fizzbuzz.view.php';
 
-fizzbuzz($i);
+
+//for loop going from 1-100 w/ function 
+
+for($num = 1; $num <= 100; $num++){
+    fizzbuzz($num); //call function 
+    }
 
 ?>

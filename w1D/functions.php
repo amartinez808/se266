@@ -1,8 +1,7 @@
 <?php
 
 function fizzbuzz($num){
-    for ($num = 1; $num <= 100; $num++)
-    {
+    
       if ( $num%2 == 0 && $num%3 == 0 )
        {
          echo $num . " FizzBuzz"."\n" ;
@@ -20,8 +19,14 @@ function fizzbuzz($num){
          echo $num."\n";
        }
      }
-}
+
+
+
+
+
+
 ?>
+
 
 
 }
