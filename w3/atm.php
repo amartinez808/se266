@@ -1,4 +1,6 @@
-<?php 
+<?php (isset($_POST['submitBtn'])){
+    if (isset($POST))
+}
 
 
 
