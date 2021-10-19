@@ -3,53 +3,53 @@ if(isset($_POST['submitData'])){
 echo "<h2>Confirmation Page</h2><br>";
 echo '<br> ';
 //adding the input filter to all the user input
-$first_name = filter_input(INPUT_POST,'fname');
-$last_name = filter_input(INPUT_POST,'lname');
-$martial_status = filter_input(INPUT_POST, 'married');
+$firstName = filter_input(INPUT_POST,'fname');
+$lastName = filter_input(INPUT_POST,'lname');
+$maritalStatus = filter_input(INPUT_POST, 'married');
 $birth = filter_input(INPUT_POST,'birth_date', );
 $feet = filter_input(INPUT_POST,'ft', FILTER_VALIDATE_INT);
 $inches = filter_input(INPUT_POST,'inches',FILTER_VALIDATE_INT);
 $weight = filter_input(INPUT_POST,'weight',FILTER_VALIDATE_INT);
 
-//if its an empty string then warn the user to enter the field they missed
-$filled = false;
-if($first_name == ""){
+//if empty string then warn user / enter the missing field 
+$empty = true;
+if($firstName == ""){
 	
-	echo "<li>You need to put your first name</li>";
-	$filled = true;
+	echo "<li>You forgot to put your first name</li>";
+	$empty = false;
 }
-if($last_name == ""){
-	echo "<li>You need to put your last name</li>";
-	$filled = true;
+if($lastName == ""){
+	echo "<li>You forgot to put your last name</li>";
+	$empty = false;
 }
-if($martial_status == ""){
-	echo "<li>You need to put your martial status</li>";
-	$filled = true;
+if($maritalStatus == ""){
+	echo "<li>You forgot to put your martial status</li>";
+	$empty = false;
 } 
 if($birth == ""){
-	echo "<li>You need to put your date of birth</li>";
-	$filled = true;
+	echo "<li>You forgot to put your date of birth</li>";
+	$empty = false;
 } 
 if($feet == ""){
-	echo "<li>Please put your Height (ft)</li>";
-	$filled = true;
+	echo "<li>Please enter your Height (ft)</li>";
+	$empty = false;
 } 
 if($inches == ""){
-	echo "<li>Please put in your height(inches)</li>";
-	$filled = true;
+	echo "<li>Please enter your height(inches)</li>";
+	$empty = false;
 } 
 if($weight == ""){
-	echo "<li>Please put in your weight</li>";
-	$filled = true;
+	echo "<li>Please enter your weight</li>";
+	$empty = false;
 } 
 
-//if every field is filled out, then print out what they typed in 
-if($filled == false)
+//once every field is filled, then print filled form
+if($empty == false)
 {
 	$bmi = bmi($feet, $inches, $weight);
-	echo'<li>First Name: '. $first_name. '</li>';
-	echo'<li>Last Name: '. $last_name. '</li>';
-	echo'<li>Martial Status: '. happy($martial_status) . '</li>';
+	echo'<li>First Name: '. $firstName. '</li>';
+	echo'<li>Last Name: '. $lastName. '</li>';
+	echo'<li>Martial Status: '. happy($maritalStatus) . '</li>';
 	echo'<li>Date of Birth: '. $birth. ' Age: '. age($birth). '</li>';
 	echo'<li>Height: '.  $feet. '\' '. $inches. '"</li>';
 	echo'<li>Weight: '. $weight. ' pounds'.  '</li>';
@@ -59,12 +59,12 @@ if($filled == false)
 }
 
 
-// echo $_POST['val1']; (demo video) 
+// echo $_POST['val1']; (from demo video) 
 
 } else {
 echo "Initial load of form";
 }
-//grabbed from canvas
+// from canvas
 function age ($bdate) {
 $date = new DateTime($bdate);
 $now = new DateTime();
@@ -93,11 +93,11 @@ else if($bmi > 25.0 && $bmi < 29.9){
 	echo 'You are overweight';
 }
 else{
-	echo 'Obese';
+	echo 'Overweight';
 }
 }
-function happy ($martial_status){
-return $martial_status == 'Y' ? 'Married' : 'single';
+function happy ($maritalStatus){
+return $maritalStatus == 'Y' ? 'Married' : 'single';
 }
 
 
@@ -114,17 +114,17 @@ return $martial_status == 'Y' ? 'Married' : 'single';
 	<h1>Patient Form</h1>
 	<form action="form.php" method="post">
 		<b> First Name: </b>
-		<input type="text" name="fname" placeholder="fname" value="<?=$first_name?>">
+		<input type="text" name="fname" placeholder="fname" value="<?=$firstName?>">
 
 		<br>
 		<br>
-		<b> Last Name: </b><input type="text" name="lname" placeholder="Lastname" value="<?=$last_name?>">
+		<b> Last Name: </b><input type="text" name="lname" placeholder="Lastname" value="<?=$lastName?>">
 
 		<br>
 		<br>
-		<b>Married: </b><input type="radio" name="married" value="Y" <?php if($martial_status == 'Y') echo 'Checked'; ?>>
+		<b>Married: </b><input type="radio" name="married" value="Y" <?php if($maritalStatus == 'Y') echo 'Checked'; ?>>
 		Yes
-		<input type="radio" name="married" value="N"<?php if($martial_status == 'N') echo 'Checked'; ?>> No
+		<input type="radio" name="married" value="N"<?php if($maritalStatus == 'N') echo 'Checked'; ?>> No
 		<br>
 		<br>
 		<b>Birth Date: </b><input type="date" name="birth_date" value="<?=$birth ?>">
