@@ -7,7 +7,7 @@
             $this -> balance = $b;
             $this -> startDate = $sd;
 
-           // automatically triggered on instantiation
+           // automatically triggered on instantiation //
         }
 
         public function deposit ($amount) {
