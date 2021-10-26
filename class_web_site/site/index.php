@@ -78,23 +78,22 @@
 </head>
 <body>
 <div class="navbar">
+  <a href="site/index.php">Home</a>
   
   <div class="dropdown">
     <button class="dropbtn" onclick="dropDown()">Assignments
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content" id="myDropdown">
-      <a href="w1/index.php">Assignment 1</a>
-      <a href="w1B/index.php">Assignment 2</a>
-      <a href="w1C/index.php">Assignment 3</a>
-      <a href="w1D/fizzbuzz.php">Assignment 4</a>
-      <a href="w2/index.php">Assignment 5</a>
+      <a href="w1/fizzbuzz.php">Assignment 1</a>
+      <a href="w2/form.php">Assignment 2</a>
+      <a href="w3/atm.php">Assignment 3</a>
     </div>
 
   </div> 
-  <a href="https://www.heroku.com/training-and-education">Heroku Resources</a>
-  <a href="https://www.php.net/manual/en/language.types.resource.php">PHP Resources</a>
-  <a href="https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources">Git Resources</a>
+  <a href="class_web_site/site/heroku_resources.php">Heroku Resources</a>
+  <a href="class_web_site/site/php_resources.php">PHP Resources</a>
+  <a href="class_web_site/site/git_resources.php">Git Resources</a>
   <a href="https://github.com/amartinez808/se266">My GitHub Repo</a>
 </div>
 <script>

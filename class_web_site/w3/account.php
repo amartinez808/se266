@@ -11,7 +11,11 @@
         }
 
         public function deposit ($amount) {
-            // write code here
+            
+                $b = $amount + $b;
+                echo "balance is : $b";
+            
+                // write code here
         }
 
         abstract public function withdrawal($amount);
