@@ -20,17 +20,17 @@
         // this is an abstract method. This method must be defined in all classes
         // that inherit from this class
         public function getStartDate() {
-            return $this ->sd;
+            return $this ->startDate;
             // write code here
         }
 
         public function getBalance() {
-            return $this ->b;
+            return $this ->balance;
             // write code here
         }
 
         public function getAccountId() {
-            return $this -> id;
+            return $this -> accountId;
             // write code here
         }
 
@@ -45,7 +45,7 @@
         }
     }
 
-//----------------------checking--------------
+//----------------------checking----------------
 
 
     class CheckingAccount extends Account {

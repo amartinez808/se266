@@ -1,6 +1,6 @@
 <?php 
-$newcheckingvar = 1300;
-   $newsavingvar = 5000;
+    $newcheckingvar = 1300;
+    $newsavingvar = 5000;
 
     if(isset($_POST['checkingBalance'])){
         $newcheckingvar = $_POST['checkingBalance'];
@@ -10,8 +10,8 @@ $newcheckingvar = 1300;
         $newsavingvar = $_POST['savingsBalance'];
     }
 
-  $savings = new SavingsAccount('S123', $newsavingvar , '03-20-2020');
-   $checking = new CheckingAccount ('C123', $newcheckingvar, '12-20-2019');
+    $savings = new SavingsAccount('S123', $newsavingvar , '03-20-2020');
+    $checking = new CheckingAccount ('C123', $newcheckingvar, '12-20-2019');
 
        if (isset ($_POST['withdrawChecking'])) {
             $checking->withdrawal(filter_input(INPUT_POST, 'checkingWithdrawAmount'));
