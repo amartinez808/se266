@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>SE 266 - Antonio</title>
+  <title>SE 266 - Antonio Martinez</title>
 <style>
 p.a {
   
@@ -81,16 +81,16 @@ li {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content" id="myDropdown">
-      <a href="../w1/fizzbuzz.php">Assignment 1</a>
-      <a href="../w2/form.php">Assignment 2</a>
-      <a href="../week3/index.php">Assignment 3</a>
-      <a href="../week4/index.php">Assignment 4</a>
-      <a href="../week5/index.php">Assignment 5</a>
-      <a href="../week6/index.php">Assignment 6</a>
-      <a href="../week7/index.php">Assignment 7</a>
-      <a href="../week8/index.php">Assignment 8</a>
-      <a href="../week9/index.php">Assignment 9</a>
-      <a href="../week10/index.php">Assignment 10</a> 
+      <a href="../w1/fizzbuzz.php">Week 1</a>
+      <a href="../w2/form.php">Week2</a>
+      <a href="../week3/index.php">Week3</a>
+      <a href="../week4/index.php">Week4</a>
+      <a href="../week5/index.php">Week5</a>
+      <a href="../week6/index.php">Week6</a>
+      <a href="../week7/index.php">Week7</a>
+      <a href="../week8/index.php">Week8</a>
+      <a href="../week9/index.php">Week9</a>
+      <a href="../week10/index.php">Week10</a> 
     </div>
   </div> 
   <a href="../site/heroku_resources.php">Heroku Resources</a>

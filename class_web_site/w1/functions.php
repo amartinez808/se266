@@ -1,32 +1,7 @@
 <?php
-
-function fizzbuzz($num){
-    
-      if ( $num%2 == 0 && $num%3 == 0 )
-       {
-         echo $num . " FizzBuzz"."\n" ;
-       }
-      else if ( $num%2 == 0 ) 
-       {
-         echo $num. " Fizz"."\n";
-       }
-         else if ( $num%3 == 0 ) 
-       {
-         echo $num. " Buzz"."\n";
-       }
-         else
-       {
-         echo $num."\n";
-       }
-     }
-
-
-
-
-
-
+    //returns true if user is above 21 and can enter clud
+    function aboveAgeLimit($age)
+    {
+        return $age >= 21;
+    }
 ?>
-
-
-
-}
