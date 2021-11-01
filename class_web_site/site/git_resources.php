@@ -3,8 +3,8 @@
  <h2>Git Resources</h2>
        
     <ul>
-        <li><a href="https://www.youtube.com/githubguides">GitHub Training & Guides</a></li> 
-        <li><a href="https://git-scm.com/book/en/v2">Pro Git Book</a></li> 
+        <li><a href="https://www.youtube.com/watch?v=RGOj5yH7evk">GitHub Tutorial</a></li> 
+        <li><a href="https://resources.github.com/">github resources</a></li> 
         <li><a href="https://discord.com/">Discord</a></li> 
 
     </ul> 
