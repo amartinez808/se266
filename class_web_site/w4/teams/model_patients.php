@@ -1,15 +1,15 @@
 <?php
 
-    include (__DIR__ . '/db.php');
+    include ('db.php');
     
     
-    function getPatients () {
+    function getPatients() {
         global $db;
         
         
         $results = [];
 
-        $stmt = $db->prepare("SELECT id, patientFirstName,patientLastName, patientMarried, patientBirthDate FROM patients ORDER BY id"); 
+        $stmt = $db->prepare("SELECT id, patientFirstName, patientLastName, patientMarried, patientBirthDate FROM patients ORDER BY id"); 
         
         if ( $stmt->execute() && $stmt->rowCount() > 0 ) {
              $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -20,15 +20,17 @@
     }
 
     
-    function addTeam ($id, $d) {
+    function addPatient ($fn, $ln, $mr, $dob) {
         global $db;
         $results = "Not added";
 
-        $stmt = $db->prepare("INSERT INTO patients SET patient = :team, division = :division");
+        $stmt = $db->prepare("INSERT INTO patients SET patientFirstName = :first, patientLastName = :last, patientMarried = :married, patientBirthDate = CAST(:birth AS DATE)" );
 
         $binds = array(
-            ":team" => $t,
-            ":division" => $d
+            ":first" => $fn,
+            ":last" => $ln,
+            ":married"=> $mr,
+            ":birth"=> $dob,
         );
         
         
@@ -40,7 +42,20 @@
     }
    
 
-    function addTeam2 ($t, $d) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*function addTeam2 ($t, $d) {
         global $db;
         $results = "Not added";
 
