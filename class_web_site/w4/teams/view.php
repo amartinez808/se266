@@ -19,7 +19,6 @@
     <div class="col-sm-offset-2 col-sm-10">
         <h1>NFL Teams</h1>
     
-   
   
     <table class="table table-striped">
             <thead>

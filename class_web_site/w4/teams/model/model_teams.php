@@ -1,73 +1,75 @@
-
 <?php
 
-include (__DIR__ . '/db.php');
-var_dump($db);
-exit;
-
-function getTeams () {
-    global $db;
+    include (__DIR__ . '/db.php');
     
     
-    $results = [];
+    function getPatients () {
+        global $db;
+        
+        
+        $results = [];
 
-    $stmt = $db->prepare("SELECT id, teamName, division FROM teams ORDER BY teamName"); 
-    
-    if ( $stmt->execute() && $stmt->rowCount() > 0 ) {
-         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-             
-     }
-     
-     return ($results);
-}
-
-
-function addTeam ($t, $d) {
-    global $db;
-    $results = "Not added";
-
-    $stmt = $db->prepare("INSERT INTO teams SET teamName = :team, division = :division");
-
-    $binds = array(
-        ":team" => $t,
-        ":division" => $d
-    );
-    
-    
-    if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
-        $results = 'Data Added';
+        $stmt = $db->prepare("SELECT id, patientFirstName,patientLastName, patientMarried, patientBirthDate FROM patients ORDER BY id"); 
+        
+        if ( $stmt->execute() && $stmt->rowCount() > 0 ) {
+             $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                 
+         }
+         
+         return ($results);
     }
+
     
-    return ($results);
-}
+    function addTeam ($id, $d) {
+        global $db;
+        $results = "Not added";
 
+        $stmt = $db->prepare("INSERT INTO patients SET patient = :team, division = :division");
 
-
-function addTeam2 ($t, $d) {
-    global $db;
-    $results = "Not added";
-
-    $stmt = $db->prepare("INSERT INTO teams SET teamName = :team, division = :division");
-   
-    $stmt->bindValue(':team', $t);
-    $stmt->bindValue(':division', $d);
-   
-    
-    
-    if ($stmt->execute() && $stmt->rowCount() > 0) {
-        $results = 'Data Added';
+        $binds = array(
+            ":team" => $t,
+            ":division" => $d
+        );
+        
+        
+        if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
+            $results = 'Data Added';
+        }
+        
+        return ($results);
     }
    
-    $stmt->closeCursor();
+
+    function addTeam2 ($t, $d) {
+        global $db;
+        $results = "Not added";
+
+        $stmt = $db->prepare("INSERT INTO teams SET teamName = :team, division = :division");
+       
+        $stmt->bindValue(':team', $t);
+        $stmt->bindValue(':division', $d);
+       
+        
+        
+        if ($stmt->execute() && $stmt->rowCount() > 0) {
+            $results = 'Data Added';
+        }
+       
+        $stmt->closeCursor();
+       
+        return ($results);
+    }
+
+   /* $teams = getTeams();
+    $team = $teams[0];
+    echo $team['teamName'];
+    
    
-    return ($results);
-}
-
-
-//   $results = addTeam2 ('Ajax', 'Eredivisie');
-//   echo $results;
-
-
+    
+    //   $result = addTeam2 ('Ajax', 'Eredivisie');
+    //   echo $result;*/
+    
+    
 
 ?>
 
