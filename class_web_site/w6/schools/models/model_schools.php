@@ -1,6 +1,6 @@
 <?php
 
-    include (__DIR__ . '/db.php');
+    include ('db.php');
     
     function insertSchoolsFromFile ($fname) {
         global $db;
@@ -79,16 +79,18 @@
    
    function checkLogin ($userName, $password) {
     global $db;
-    $stmt = $db->prepare("SELECT id FROM users WHERE userName =:userName AND userPassword = :password");
+    $stmt = $db->prepare("SELECT * FROM users WHERE userName =:userName AND userPassword = :password");
 
     $stmt->bindValue(':userName', $userName);
-    $stmt->bindValue(':password', sha1($password));
+    $stmt->bindValue(':password', $password);
+
     
-    $stmt->execute ();
-   
+    
+    $temp = $stmt->execute ();
+    var_dump($temp);
+    
     return( $stmt->rowCount() > 0);
-    
-}
+    }
  
 
    // make sure these functions work
@@ -107,5 +109,7 @@
     
     
     // if ($result) echo "Logged in"; else echo "Not logged in";
+    
+?>
     
    

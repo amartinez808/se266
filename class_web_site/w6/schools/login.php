@@ -5,49 +5,17 @@
 
     if (isPostRequest()) {
         $username = filter_input(INPUT_POST, 'userName');
-        $password = filter_input(INPUT_POST, 'userPassword');
-        // your logic here
-        if(!empty($username)){
-        if(!empty($password)) {
-           $host = "localhost";
-           $dbusername = "root";
-           $dbpassword = "antonio";
-           $dbname = "se266_antonio";
-           //Create connection
-           $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
+    
+        $password = filter_input(INPUT_POST, 'password'); //move this to just before the checkLogin, then overwrite after
+        $passHash = sha1('school-salt' . $password);
+        $password = "no passy password for you ;).";
 
-           if(mysqli_connect_error()){
-               die('Connection Error'('. mysqli_connect_errno() .')  
-               . mysqli_connect_error());
-           }
-           else{
-               $sql = "INSERT INTO account (userName, userPassword)
-               values ('$username','$password')";
-               if ($conn->query($sql)){
-                   echo "inserted new record succesfully";
-               }
-               else{
-                   echo "Error: ". $sql ."<br>". $$conn->error;
-               }
-               $conn->close();
-           }
-        }  
-       else{
-           echo "Password can't be empty";
-           die();
-       }
-        }
-        else{
-            echo "Username cant be empty";
-            die();
-        }
-
-
-
-
-
+        if(checkLogin($username, $passHash));{
+            // header('Location: upload.php');
+        } 
+        
     }
-
+    
 ?>
 
 
