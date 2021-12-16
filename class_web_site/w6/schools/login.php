@@ -1,18 +1,27 @@
 <?php
     include_once __DIR__ . "/models/model_schools.php";
     include_once __DIR__ . "/includes/functions.php";
-    
+    session_start();
 
     if (isPostRequest()) {
         $username = filter_input(INPUT_POST, 'userName');
-    
         $password = filter_input(INPUT_POST, 'password'); //move this to just before the checkLogin, then overwrite after
-        $passHash = sha1('school-salt' . $password);
-        $password = "no passy password for you ;).";
 
-        if(checkLogin($username, $passHash));{
-            // header('Location: upload.php');
+        $passHash = sha1('school-salt'.$password);
+       
+        $password = "no passy password for you ;)";
+        if(checkLogin($username, $passHash))
+        {
+            $_SESSION['Login'] = true;
+            header('Location: upload.php');
+            
+            
         } 
+        else{
+
+            $_SESSION['Login'] = false;
+            echo "<div class = 'error'> Enter valid username and password.</div>";
+        }
         
     }
     

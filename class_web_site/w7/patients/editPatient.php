@@ -77,8 +77,6 @@
         </div>
       </div>
       
-
-
       <div class="form-group">
         <label class="control-label col-sm-2" for="pwd">Patient Last Name:</label>
         <div class="col-sm-10">          
@@ -92,14 +90,10 @@
         <input type="radio" name="pmarried" value="0">No
       </div>
 
-
       <div class="form-group">
         <label class="control-label col-sm-2" for="pwd"> Birth Date: </label>
         <input type = "date" name="bdate">
       </div>
-      
-      
-      
       
       <div class="form-group">  
         <div class="col-sm-offset-2 col-sm-10">

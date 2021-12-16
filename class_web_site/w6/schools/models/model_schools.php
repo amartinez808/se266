@@ -31,7 +31,7 @@
         }
 
         return(true);
-      }
+    }
    
     
    function deleteAllSchools () {
@@ -87,7 +87,6 @@
     
     
     $temp = $stmt->execute ();
-    var_dump($temp);
     
     return( $stmt->rowCount() > 0);
     }
@@ -95,8 +94,7 @@
 
    // make sure these functions work
     $schools = getSchools ('New England', '', 'RI');
-   
-    var_dump ($schools);
+
     
     //   $b = checkLogin('donald', 'duck');
     //    if ($b) echo "Logged in"; else echo "Not logged in";

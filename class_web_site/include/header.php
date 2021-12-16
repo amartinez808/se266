@@ -83,20 +83,20 @@ li {
     <div class="dropdown-content" id="myDropdown">
       <a href="../w1/fizzbuzz.php">Week 1</a>
       <a href="../w2/form.php">Week2</a>
-      <a href="../week3/index.php">Week3</a>
-      <a href="../week4/index.php">Week4</a>
-      <a href="../week5/index.php">Week5</a>
-      <a href="../week6/index.php">Week6</a>
-      <a href="../week7/index.php">Week7</a>
-      <a href="../week8/index.php">Week8</a>
-      <a href="../week9/index.php">Week9</a>
-      <a href="../week10/index.php">Week10</a> 
+      <a href="../w3/index.php">Week3</a>
+      <a href="../w4/index.php">Week4</a>
+      <a href="../w5/index.php">Week5</a>
+      <a href="../w6/index.php">Week6</a>
+      <a href="../w7/index.php">Week7</a>
+      <a href="../w8/index.php">Week8</a>
+      <a href="../w9/index.php">Week9</a>
+      <a href="../w10/index.php">Week10</a> 
     </div>
   </div> 
-  <a href="../site/heroku_resources.php">Heroku Resources</a>
-  <a href="../site/php_resources.php">PHP Resources</a>
-  <a href="../site/git_resources.php">Git Resources</a>
-  <a href="https://github.com/hvanrenselaar/se266-spring-2020">My GitHub Repo</a>
+  <a href="/SE266/class_web_site/w7/site/heroku_resources.php">Heroku Resources</a>
+  <a href="/SE266/class_web_site/w7/site/php_resources.php">PHP Resources</a>
+  <a href="/SE266/class_web_site/w7/site/git_resources.php">Git Resources</a>
+  <a href="https://github.com/amartinez808/se266">My GitHub Repo</a>
 </div>
 <script>
 /* When the user clicks on the button, 
